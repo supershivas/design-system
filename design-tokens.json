@@ -1,5 +1,5 @@
 {
-  "_comment": "SOURCE DE VÉRITÉ PARTAGÉE — identique à idee/design-tokens.json et la-fabrique/design-tokens.json. Si tu modifies une valeur ici pour harmoniser les deux apps, reporte le même changement dans l'autre repo (et dans le CSS qui la consomme).",
+  "_comment": "SOURCE DE VÉRITÉ PARTAGÉE — identique à idee/design-tokens.json. Si tu modifies une valeur ici pour harmoniser les deux apps, reporte le même changement dans l'autre repo (et dans le CSS qui la consomme).",
   "colors": {
     "accentFixed": "#C0392B",
     "accentFixedHover": "#9B2D22",
@@ -34,6 +34,7 @@
   },
   "sidebarButtonNew": {
     "height": "40px",
+    "padding": "0 12px",
     "fontSize": "0.875rem",
     "fontWeight": 500,
     "gap": "8px",
