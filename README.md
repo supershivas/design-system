@@ -1,7 +1,7 @@
 # design-system
 
 Source de vérité partagée pour les design tokens utilisés par
-[La fabrique](https://github.com/supershivas/la-fabrique) et
+[Source](https://github.com/supershivas/source) et
 [Idée](https://github.com/supershivas/idee).
 
 ## Contenu
