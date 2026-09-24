@@ -18,8 +18,8 @@ deux choses :
 | **Source** | [supershivas/source](https://github.com/supershivas/source) | https://source-sigma-kohl.vercel.app/app |
 | **ProjetV** | [supershivas/projetV](https://github.com/supershivas/projetV) | https://supershivas.github.io/projetV/ |
 | **Stockportfolio** | [supershivas/stockportfolio](https://github.com/supershivas/stockportfolio) | https://stockportfolio-five.vercel.app/ |
-| **Studio Créa** | [supershivas/studio-crea](https://github.com/supershivas/studio-crea) | — |
-| **Elec AITI** | [supershivas/elec-aiti](https://github.com/supershivas/elec-aiti) | — |
+| **Studio Créa** | [supershivas/studio-crea](https://github.com/supershivas/studio-crea) | https://supershivas.github.io/studio-crea/ |
+| **Elec AITI** | [supershivas/elec-aiti](https://github.com/supershivas/elec-aiti) | https://supershivas.github.io/elec-aiti/ |
 
 ## Contenu
 

@@ -4,7 +4,8 @@
 
 ## Description
 
-<!-- À quoi sert l'app, pour qui, URL de production. -->
+<!-- À quoi sert l'app, pour qui, URL de production.
+     Cible : mobile et bureau (défaut), uniquement mobile ou uniquement bureau. -->
 
 ## Stack
 

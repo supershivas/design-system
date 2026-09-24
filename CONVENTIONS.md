@@ -107,7 +107,11 @@ Le motif est simple, lisible à 16 px, dans les couleurs des tokens.
 ## 8. Interface
 
 - Interface en français.
-- Mobile d'abord : tout doit fonctionner en largeur téléphone (375 px) avant le bureau.
+- Cible : par défaut, une app fonctionne sur téléphone et sur ordinateur. Une app
+  peut être déclarée « uniquement mobile » ou « uniquement bureau » : c'est
+  indiqué dans la section Description de son `CLAUDE.md`.
+- Mobile d'abord : tout doit fonctionner en largeur téléphone (375 px) avant le
+  bureau, sauf pour une app uniquement bureau.
 - Zones tactiles d'au moins 44 × 44 px.
 - Mode sombre selon `prefers-color-scheme`, via les tokens.
 - L'app doit s'ouvrir sur ordinateur comme sur téléphone. Si elle est conçue
@@ -115,6 +119,10 @@ Le motif est simple, lisible à 16 px, dans les couleurs des tokens.
   téléphone (style iPhone), centré, au lieu de l'étirer sur toute la largeur.
   Utilise pour cela `phone-frame.js` du design system (mode d'emploi en tête
   du fichier), jamais un cadre fait maison.
+- Si elle est conçue uniquement pour ordinateur, elle reste accessible sur
+  téléphone sans rien casser : un bandeau discret, refermable, indique
+  « Cette app est prévue pour un écran d'ordinateur ». Ne l'optimise pas pour
+  le mobile sans ma demande.
 
 ## 9. Code
 

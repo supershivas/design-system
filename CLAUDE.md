@@ -9,8 +9,8 @@ les apps (liste complète dans le tableau du `README.md`) :
 | **Source** | `supershivas/source` | https://source-sigma-kohl.vercel.app/app |
 | **ProjetV** | `supershivas/projetV` | https://supershivas.github.io/projetV/ |
 | **Stockportfolio** | `supershivas/stockportfolio` | https://stockportfolio-five.vercel.app/ |
-| **Studio Créa** | `supershivas/studio-crea` | — |
-| **Elec AITI** | `supershivas/elec-aiti` | — |
+| **Studio Créa** | `supershivas/studio-crea` | https://supershivas.github.io/studio-crea/ |
+| **Elec AITI** | `supershivas/elec-aiti` | https://supershivas.github.io/elec-aiti/ |
 
 Contenu : `design-tokens.json`, `mobile.css`, `phone-frame.js`, `CONVENTIONS.md`,
 `templates/`.
