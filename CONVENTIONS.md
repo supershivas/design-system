@@ -25,12 +25,14 @@ applique la règle de l'app et signale-moi le conflit.
 ## 2. Versioning
 
 - La version suit le format `MAJEUR.MINEUR.CORRECTIF` (ex. `1.4.2`). Chaque push
-  incrémente un des trois niveaux :
+  qui change ce que voit ou vit l'utilisateur incrémente un des trois niveaux :
   - **correctif** (`1.4.2` → `1.4.3`) : correction de bug, ajustement visuel, texte ;
   - **mineur** (`1.4.3` → `1.5.0`) : nouvelle fonctionnalité visible ; le correctif
     repart à 0 ;
   - **majeur** (`1.5.0` → `2.0.0`) : uniquement sur ma demande.
 - En cas de doute entre correctif et mineur, choisis correctif.
+- Un push sans effet pour l'utilisateur (documentation, `CLAUDE.md`, configuration,
+  scripts de développement) ne change pas la version.
 - Une nouvelle app démarre en `1.0.0`.
 - La source unique de la version est `version.json`, placé dans `public/` pour les
   apps Next.js et à la racine pour les apps statiques :
