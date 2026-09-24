@@ -28,6 +28,8 @@ deux choses :
 - `mobile.css` — CSS PWA/mobile partagé.
 - `phone-frame.js` — cadre style iPhone affiché sur ordinateur par les apps
   uniquement mobiles (mode d'emploi en tête du fichier).
+- `app-update.js` — version, historique et mise à jour automatique
+  (sections 2 à 4 des conventions), en module ES sans dépendance.
 - `CONVENTIONS.md` — conventions communes à toutes les apps.
 - `templates/` — fichiers à copier dans une app (script de synchronisation,
   réglages Claude Code, modèle de `CLAUDE.md`).
@@ -40,7 +42,7 @@ dépôt :
 
 - `design-tokens.json` → à la racine de l'app ;
 - `CONVENTIONS.md` → `.claude/conventions.md` ;
-- `mobile.css` et `phone-frame.js` → uniquement là où l'app en a déjà une
+- `mobile.css`, `phone-frame.js` et `app-update.js` → uniquement là où l'app en a déjà une
   copie (racine, `app/`, `css/`, `js/`, `public/` ou `src/`). Pour adopter
   l'un d'eux, copie-le une fois à l'endroit voulu ; il suivra ensuite.
 

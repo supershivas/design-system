@@ -109,6 +109,9 @@ développer une fonctionnalité listée ci-dessous.
   `sessionStorage` pour savoir qu'il faut l'afficher.
 - Si l'app a un service worker, déclenche aussi `registration.update()` et
   `skipWaiting()` pour ne pas recharger l'ancienne version depuis le cache.
+- `app-update.js` du design system fait tout cela (et lit `CHANGELOG.md`) : utilise-le
+  plutôt que de le réécrire. Les apps Next.js (Idée, Source) ont leur équivalent,
+  basé sur l'identifiant de build.
 
 ## 5. Design system
 

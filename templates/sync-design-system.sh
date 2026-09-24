@@ -2,7 +2,7 @@
 # Récupère depuis supershivas/design-system :
 #   - design-tokens.json -> ./design-tokens.json
 #   - CONVENTIONS.md     -> ./.claude/conventions.md
-#   - mobile.css et phone-frame.js -> mis à jour là où l'app en a déjà une
+#   - mobile.css, phone-frame.js et app-update.js -> mis à jour là où l'app en a déjà une
 #     copie (racine, app/, css/, js/, public/ ou src/). Pour adopter un de
 #     ces fichiers, copie-le une fois à l'endroit voulu ; il suivra ensuite.
 # Lancé par le hook SessionStart (.claude/settings.json).
@@ -30,7 +30,7 @@ fetch() {
 fetch design-tokens.json design-tokens.json
 fetch CONVENTIONS.md .claude/conventions.md
 
-for file in mobile.css phone-frame.js; do
+for file in mobile.css phone-frame.js app-update.js; do
   for dir in . app css js public src; do
     [ -f "$dir/$file" ] && fetch "$file" "$dir/$file"
   done
