@@ -56,9 +56,9 @@ Il ne bloque jamais : si le réseau échoue, l'app garde sa copie précédente.
 Toute modification d'une valeur partagée doit être faite ici en premier,
 puis reportée dans le CSS des apps qui la consomment.
 
-> **Obsolète :** `scripts/sync-tokens.sh`, présent dans les apps plus
-> anciennes, est remplacé par `scripts/sync-design-system.sh`. Remplace-le
-> au prochain passage dans l'app.
+> **Obsolète :** `scripts/sync-tokens.sh` est remplacé par
+> `scripts/sync-design-system.sh`. Toutes les apps du tableau ont été
+> migrées ; ne le réintroduis pas.
 
 ## Conventions
 
