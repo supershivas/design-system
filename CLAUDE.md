@@ -3,14 +3,14 @@
 Source de vérité partagée pour les design tokens et les conventions de toutes
 les apps (liste complète dans le tableau du `README.md`) :
 
-| App | Repo | URL de production |
-|-----|------|-------------------|
-| **Idée** | `supershivas/idee` | https://idee-neon.vercel.app/ |
-| **Source** | `supershivas/source` | https://source-sigma-kohl.vercel.app/app |
-| **ProjetV** | `supershivas/projetV` | https://supershivas.github.io/projetV/ |
-| **Stockportfolio** | `supershivas/stockportfolio` | https://stockportfolio-five.vercel.app/ |
-| **Studio Créa** | `supershivas/studio-crea` | https://supershivas.github.io/studio-crea/ |
-| **Elec AITI** | `supershivas/elec-aiti` | https://supershivas.github.io/elec-aiti/ |
+| App | Repo | URL de production | Catégorie |
+|-----|------|-------------------|-----------|
+| **Idée** | `supershivas/idee` | https://idee-neon.vercel.app/ | Primaire |
+| **Source** | `supershivas/source` | https://source-sigma-kohl.vercel.app/app | Primaire |
+| **ProjetV** | `supershivas/projetV` | https://supershivas.github.io/projetV/ | Secondaire |
+| **Stockportfolio** | `supershivas/stockportfolio` | https://stockportfolio-five.vercel.app/ | Secondaire |
+| **Studio Créa** | `supershivas/studio-crea` | https://supershivas.github.io/studio-crea/ | Secondaire |
+| **Elec AITI** | `supershivas/elec-aiti` | https://supershivas.github.io/elec-aiti/ | Secondaire |
 
 Contenu : `design-tokens.json`, `mobile.css`, `phone-frame.js`, `CONVENTIONS.md`,
 `templates/`.

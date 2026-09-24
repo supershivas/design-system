@@ -5,6 +5,7 @@
 ## Description
 
 <!-- À quoi sert l'app, pour qui, URL de production.
+     Catégorie : primaire ou secondaire.
      Cible : mobile et bureau (défaut), uniquement mobile ou uniquement bureau. -->
 
 ## Stack

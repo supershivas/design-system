@@ -12,14 +12,14 @@ deux choses :
 
 ## Applications
 
-| App | Repo | Production |
-|-----|------|------------|
-| **Idée** | [supershivas/idee](https://github.com/supershivas/idee) | https://idee-neon.vercel.app/ |
-| **Source** | [supershivas/source](https://github.com/supershivas/source) | https://source-sigma-kohl.vercel.app/app |
-| **ProjetV** | [supershivas/projetV](https://github.com/supershivas/projetV) | https://supershivas.github.io/projetV/ |
-| **Stockportfolio** | [supershivas/stockportfolio](https://github.com/supershivas/stockportfolio) | https://stockportfolio-five.vercel.app/ |
-| **Studio Créa** | [supershivas/studio-crea](https://github.com/supershivas/studio-crea) | https://supershivas.github.io/studio-crea/ |
-| **Elec AITI** | [supershivas/elec-aiti](https://github.com/supershivas/elec-aiti) | https://supershivas.github.io/elec-aiti/ |
+| App | Repo | Production | Catégorie |
+|-----|------|------------|-----------|
+| **Idée** | [supershivas/idee](https://github.com/supershivas/idee) | https://idee-neon.vercel.app/ | Primaire |
+| **Source** | [supershivas/source](https://github.com/supershivas/source) | https://source-sigma-kohl.vercel.app/app | Primaire |
+| **ProjetV** | [supershivas/projetV](https://github.com/supershivas/projetV) | https://supershivas.github.io/projetV/ | Secondaire |
+| **Stockportfolio** | [supershivas/stockportfolio](https://github.com/supershivas/stockportfolio) | https://stockportfolio-five.vercel.app/ | Secondaire |
+| **Studio Créa** | [supershivas/studio-crea](https://github.com/supershivas/studio-crea) | https://supershivas.github.io/studio-crea/ | Secondaire |
+| **Elec AITI** | [supershivas/elec-aiti](https://github.com/supershivas/elec-aiti) | https://supershivas.github.io/elec-aiti/ | Secondaire |
 
 ## Contenu
 

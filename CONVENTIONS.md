@@ -10,6 +10,40 @@ Si une règle doit changer, propose-la-moi (voir « Évolution de ces règles »
 **Priorité** : le `CLAUDE.md` de l'app prévaut sur ce fichier. En cas de conflit,
 applique la règle de l'app et signale-moi le conflit.
 
+## Catégorie : app primaire ou secondaire
+
+Chaque app est **primaire** ou **secondaire**, et son `CLAUDE.md` l'indique dans
+sa section Description. Si ce n'est pas indiqué, demande-le-moi avant de
+développer une fonctionnalité listée ci-dessous.
+
+- **Primaire** : app que j'utilise tous les jours. Elle a toutes les
+  fonctionnalités des deux listes.
+- **Secondaire** : app d'usage ponctuel. Le socle est obligatoire ; les
+  fonctionnalités avancées sont facultatives et ne se développent que sur ma
+  demande.
+
+**Socle — toutes les apps**
+
+- Interface en français, cible respectée (voir section 8), zones tactiles de 44 px.
+- `version.json` et `CHANGELOG.md` (section 2).
+- En-tête : nom cliquable à gauche, roue crantée à droite (section 3).
+- Réglages : version, 5 dernières versions, export des données en JSON (section 3).
+- Mise à jour automatique avec toast (section 4).
+- Tokens et `mobile.css` du design system (section 5).
+- `favicon.svg` et `apple-touch-icon.png` (section 6).
+- Aucun secret commité (section 7).
+
+**Avancé — obligatoire pour une app primaire, facultatif pour une secondaire**
+
+- Données synchronisées entre appareils (Supabase) et authentification (section 7).
+- Mode sombre (section 8).
+- PWA installable : `manifest.json`, icônes 192 et 512, service worker (section 6).
+- Import des données, pour restaurer un export JSON.
+- Mise à jour en temps réel entre onglets et appareils.
+- Corbeille ou annulation d'une suppression.
+- Parité visuelle stricte avec les autres apps primaires (même sidebar,
+  mêmes composants).
+
 ---
 
 ## 1. Git et déploiement
@@ -35,7 +69,7 @@ applique la règle de l'app et signale-moi le conflit.
   scripts de développement) ne change pas la version.
 - Une nouvelle app démarre en `1.0.0`.
 - La source unique de la version est `version.json`, placé dans `public/` pour les
-  apps Next.js et à la racine pour les apps statiques :
+  apps avec build (Next.js, Vite) et à la racine pour les apps statiques :
   ```json
   {
     "version": "1.4.2",
@@ -44,7 +78,9 @@ applique la règle de l'app et signale-moi le conflit.
   }
   ```
 - `changes` résume le push en cours, en 1 à 3 lignes lisibles par un non-développeur.
-  Garde un historique dans `CHANGELOG.md` (les plus récents en haut).
+  Garde un historique dans `CHANGELOG.md`, à côté de `version.json` pour que
+  l'app puisse le lire (les plus récents en haut, une section `## 1.4.2 — 2026-09-24`
+  par version, suivie de ses lignes `- …`).
 - Ne code jamais la version en dur ailleurs : l'app lit `version.json`.
 
 ## 3. En-tête et réglages
@@ -93,15 +129,19 @@ Chaque app a, dès sa création :
 
 - `favicon.svg` (qui fonctionne en clair et en sombre) ;
 - `apple-touch-icon.png` en 180 × 180 ;
-- si c'est une PWA, les icônes 192 et 512 du `manifest.json`.
+- si c'est une PWA (obligatoire pour une app primaire), les icônes 192 et 512 du
+  `manifest.json`.
 
 Le motif est simple, lisible à 16 px, dans les couleurs des tokens.
 
 ## 7. Données et synchronisation
 
-- Je passe du téléphone à deux ordinateurs : les données utilisateur doivent être
-  identiques partout. Jamais de `localStorage` seul pour du contenu.
-  `localStorage` est réservé aux préférences locales (onglet ouvert, thème).
+- Je passe du téléphone à deux ordinateurs : les données utilisateur d'une app
+  primaire doivent être identiques partout. Jamais de `localStorage` seul pour
+  son contenu ; `localStorage` est réservé aux préférences locales (onglet
+  ouvert, thème).
+- Une app secondaire peut garder ses données en local, à condition que l'export
+  JSON des réglages permette de les récupérer.
 - Stockage : Supabase. Ne crée pas de nouveau projet Supabase sans me demander.
   Réutilise un projet existant avec des tables préfixées par le nom de l'app.
 - Les clés et secrets ne sont jamais commités.
@@ -115,7 +155,8 @@ Le motif est simple, lisible à 16 px, dans les couleurs des tokens.
 - Mobile d'abord : tout doit fonctionner en largeur téléphone (375 px) avant le
   bureau, sauf pour une app uniquement bureau.
 - Zones tactiles d'au moins 44 × 44 px.
-- Mode sombre selon `prefers-color-scheme`, via les tokens.
+- Mode sombre selon `prefers-color-scheme`, via les tokens (app primaire ; facultatif
+  pour une app secondaire).
 - L'app doit s'ouvrir sur ordinateur comme sur téléphone. Si elle est conçue
   uniquement pour le mobile, la version bureau l'affiche dans un cadre de
   téléphone (style iPhone), centré, au lieu de l'étirer sur toute la largeur.
@@ -146,6 +187,7 @@ Le motif est simple, lisible à 16 px, dans les couleurs des tokens.
 
 À la création d'une nouvelle app :
 
+0. Demande-moi si l'app est primaire ou secondaire, et note-le dans son `CLAUDE.md`.
 1. Copie depuis `design-system/templates/` : `sync-design-system.sh` dans `scripts/`,
    `claude-settings.json` en `.claude/settings.json`, `CLAUDE.app.md` en `CLAUDE.md`.
 2. Lance le sync.
