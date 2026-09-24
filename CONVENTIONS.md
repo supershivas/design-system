@@ -19,6 +19,8 @@ applique la règle de l'app et signale-moi le conflit.
 - Un push sur `main` déploie en production (Vercel ou GitHub Pages). Vérifie que
   l'app se charge sans erreur avant de pousser.
 - Messages de commit en français, courts, à l'impératif : « Ajoute l'export JSON ».
+- Après chaque nouvelle version poussée, donne-moi l'URL de production cliquable,
+  pour que je l'ouvre directement sur ordinateur comme sur téléphone.
 
 ## 2. Versioning
 
@@ -107,6 +109,9 @@ Le motif est simple, lisible à 16 px, dans les couleurs des tokens.
 - Mobile d'abord : tout doit fonctionner en largeur téléphone (375 px) avant le bureau.
 - Zones tactiles d'au moins 44 × 44 px.
 - Mode sombre selon `prefers-color-scheme`, via les tokens.
+- L'app doit s'ouvrir sur ordinateur comme sur téléphone. Si elle est conçue
+  uniquement pour le mobile, la version bureau l'affiche dans un cadre de
+  téléphone (style iPhone), centré, au lieu de l'étirer sur toute la largeur.
 
 ## 9. Code
 
