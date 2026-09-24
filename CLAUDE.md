@@ -12,7 +12,8 @@ les apps (liste complète dans le tableau du `README.md`) :
 | **Studio Créa** | `supershivas/studio-crea` | — |
 | **Elec AITI** | `supershivas/elec-aiti` | — |
 
-Contenu : `design-tokens.json`, `mobile.css`, `CONVENTIONS.md`, `templates/`.
+Contenu : `design-tokens.json`, `mobile.css`, `phone-frame.js`, `CONVENTIONS.md`,
+`templates/`.
 
 ## CONVENTIONS.md
 

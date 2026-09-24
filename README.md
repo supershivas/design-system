@@ -3,8 +3,9 @@
 Source de vérité partagée entre toutes les apps Supershivas. Ce dépôt contient
 deux choses :
 
-1. **Les design tokens** (`design-tokens.json`, `mobile.css`) — les valeurs de
-   design partagées : couleurs, radii, polices, dimensions.
+1. **Les design tokens** (`design-tokens.json`, `mobile.css`, `phone-frame.js`)
+   — les valeurs et éléments de design partagés : couleurs, radii, polices,
+   dimensions, CSS mobile, cadre téléphone.
 2. **Les conventions** (`CONVENTIONS.md`) — les règles communes que Claude Code
    applique dans chaque app : Git, versioning, en-tête, mise à jour
    automatique, données, interface, code.
@@ -25,6 +26,8 @@ deux choses :
 - `design-tokens.json` — couleurs, radii, polices, dimensions
   sidebar/search/kbd/header/modal partagées entre les applications.
 - `mobile.css` — CSS PWA/mobile partagé.
+- `phone-frame.js` — cadre style iPhone affiché sur ordinateur par les apps
+  uniquement mobiles (mode d'emploi en tête du fichier).
 - `CONVENTIONS.md` — conventions communes à toutes les apps.
 - `templates/` — fichiers à copier dans une app (script de synchronisation,
   réglages Claude Code, modèle de `CLAUDE.md`).
@@ -36,7 +39,10 @@ Chaque app récupère la dernière version via `scripts/sync-design-system.sh`
 dépôt :
 
 - `design-tokens.json` → à la racine de l'app ;
-- `CONVENTIONS.md` → `.claude/conventions.md`.
+- `CONVENTIONS.md` → `.claude/conventions.md` ;
+- `mobile.css` et `phone-frame.js` → uniquement là où l'app en a déjà une
+  copie (racine, `app/`, `css/`, `js/`, `public/` ou `src/`). Pour adopter
+  l'un d'eux, copie-le une fois à l'endroit voulu ; il suivra ensuite.
 
 Le script est lancé automatiquement au début de chaque session Claude Code
 (hook `SessionStart`), et peut aussi l'être à la main :

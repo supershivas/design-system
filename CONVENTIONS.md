@@ -77,7 +77,8 @@ applique la règle de l'app et signale-moi le conflit.
 - Les tokens viennent de `design-tokens.json` (synchronisé depuis ce repo).
   Utilise les variables CSS qui en découlent, jamais des valeurs en dur pour
   couleurs, radii, polices et dimensions partagées.
-- Styles mobiles : `mobile.css` du design system.
+- Styles mobiles : `mobile.css` du design system. Cadre téléphone sur ordinateur
+  (apps uniquement mobiles) : `phone-frame.js` du design system.
 - Si tu as besoin d'une valeur qui n'existe pas dans les tokens et qui pourrait
   servir à d'autres apps, propose-la-moi pour le design system au lieu de
   l'inventer localement.
@@ -112,6 +113,8 @@ Le motif est simple, lisible à 16 px, dans les couleurs des tokens.
 - L'app doit s'ouvrir sur ordinateur comme sur téléphone. Si elle est conçue
   uniquement pour le mobile, la version bureau l'affiche dans un cadre de
   téléphone (style iPhone), centré, au lieu de l'étirer sur toute la largeur.
+  Utilise pour cela `phone-frame.js` du design system (mode d'emploi en tête
+  du fichier), jamais un cadre fait maison.
 
 ## 9. Code
 
