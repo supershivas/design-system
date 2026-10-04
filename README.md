@@ -96,9 +96,10 @@ Puis lancer `sh scripts/sync-design-system.sh`, suivre la section 11
 (« Nouvelle app ») de `CONVENTIONS.md`, et ajouter l'app au tableau
 ci-dessus.
 
-Le plus simple : coller `templates/PROMPT-NOUVELLE-APP.md`, champs remplis,
-au début de la première session Claude Code de l'app. Claude fait alors
-toutes ces étapes.
+Le plus simple : coller `templates/PROMPT-NOUVELLE-APP.md` (nom, repo et
+description à remplir) au début de la première session Claude Code de l'app.
+Claude pose alors les autres décisions en questions à choix multiples, puis
+fait toutes ces étapes.
 
 ## Publication manuelle
 

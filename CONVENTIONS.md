@@ -198,6 +198,8 @@ Le motif est simple, lisible à 16 px, dans les couleurs des tokens.
 À la création d'une nouvelle app :
 
 0. Demande-moi si l'app est primaire ou secondaire, et note-le dans son `CLAUDE.md`.
+   Pose toujours les décisions à trancher (catégorie, cible, stack, hébergement,
+   données…) avec `AskUserQuestion`, en questions à choix multiples.
 1. Copie depuis `design-system/templates/` : `sync-design-system.sh` dans `scripts/`,
    `claude-settings.json` en `.claude/settings.json`, `CLAUDE.app.md` en `CLAUDE.md`.
 2. Lance le sync.
