@@ -20,6 +20,7 @@ deux choses :
 | **Stockportfolio** | [supershivas/stockportfolio](https://github.com/supershivas/stockportfolio) | https://stockportfolio-five.vercel.app/ | Secondaire |
 | **Studio Créa** | [supershivas/studio-crea](https://github.com/supershivas/studio-crea) | https://supershivas.github.io/studio-crea/ | Secondaire |
 | **Elec AITI** | [supershivas/elec-aiti](https://github.com/supershivas/elec-aiti) | https://supershivas.github.io/elec-aiti/ | Secondaire |
+| **K2** | [supershivas/k2](https://github.com/supershivas/k2) | https://supershivas.github.io/k2/ | Secondaire |
 
 ## Contenu
 
