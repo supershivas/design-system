@@ -203,29 +203,38 @@ Pour toute app qui est un jeu :
 ## 8 ter. Labo
 
 Chaque app primaire a une rubrique **Labo** : un banc d'essai où je compare des
-variantes avant d'en adopter une (modèle : `labo.html` de Kingvi). Pour une app
-secondaire, elle est facultative et ne se crée que sur ma demande.
+variantes avant d'en adopter une. Pour une app secondaire, elle est facultative
+et ne se crée que sur ma demande. Le labo n'est **jamais une longue page à
+défiler** : c'est un écran qui montre une variante à la fois.
 
 - **Accès** : une page dédiée (`labo.html` pour une app statique, `/app/labo`
   ou `/labo` pour Next.js), avec un lien discret « Labo » (icône Tabler
-  `ti ti-flask`) dans les réglages, jamais dans l'en-tête. Sur la page, l'en-tête
-  garde le nom de l'app (lien de retour) et un libellé « Labo ».
-- **Menu** : en-tête et menu forment un seul bloc collé en haut
-  (`position: sticky`), défilable horizontalement sur mobile.
-  - Peu de rubriques : un menu d'ancres, une entrée par `<section id="…">`
-    (avec `scroll-margin-top` pour ne pas passer sous le menu).
-  - Beaucoup de rubriques : des **thèmes** en onglets, puis le sous-menu des
-    sections du thème ouvert. L'adresse garde le thème ou la section
-    (`#betes`, `#loups`) pour pouvoir partager un lien.
-- **Propositions** : chaque sujet à trancher présente ses variantes avec des
-  lettres (A, B, C…), **A étant toujours l'actuel**. Chaque variante dit en une
-  phrase ce qu'elle change. La variante retenue est marquée « retenue » et
-  branchée dans l'app ; l'ancienne reste en « ancien » ou est retirée.
+  `ti ti-flask`) dans les réglages, jamais dans l'en-tête. Sur la page,
+  l'en-tête garde le nom de l'app (lien de retour) et un libellé « Labo ».
+- **Écran à hauteur fixe** (`100dvh`) : en-tête, onglets et barre de variantes
+  restent en place ; seul le contenu de la variante défile, et seulement s'il le
+  faut.
+- **Sujets en onglets** : un onglet par sujet à trancher (cartes de la liste,
+  boutons, modales…), avec une icône Tabler. Un sujet = un seul onglet actif.
+- **Une variante à la fois** : une barre de lettres **A, B, C…** (**A est toujours
+  l'actuelle**) avec précédent/suivant. Sur bureau, la barre est sous les
+  onglets ; sur mobile, elle est **en bas de l'écran**, à portée du pouce.
+  Changer de variante : clic sur la lettre, flèches ← → du clavier, balayage
+  horizontal sur mobile. Zones de 44 px minimum.
+- **Adresse** : elle garde le sujet et la lettre (`#cartes-C`), pour partager un
+  lien ; on la met à jour sans recharger la page.
+- **Chaque variante** a un titre et une phrase qui dit ce qu'elle change. Une
+  variante en place dans l'app est marquée « actuelle » ; celle que j'ai choisie
+  est marquée « retenue » (point d'accent sur sa lettre) et branchée dans
+  l'app ; l'ancienne reste marquée « ancienne » ou est retirée.
 - **Données** : des données d'exemple en dur ; le labo ne lit ni n'écrit rien
-  dans Supabase ni dans le `localStorage` (hors outils propres au labo).
+  dans Supabase ni dans le `localStorage` (hors outils propres au labo, comme
+  l'éditeur de dessins de Kingvi).
 - **Règles** : tokens et icônes au trait comme partout (sections 5 et 8) ; la page
   est protégée par la même authentification que l'app. Créer le labo ou adopter
   une variante change ce que je vois : incrémente la version (section 2).
+- Modèle de référence : `app/app/labo/page.tsx` dans `supershivas/source`
+  (tableau `TOPICS` : ajouter un sujet ou une variante = ajouter une entrée).
 
 ## 9. Code
 
