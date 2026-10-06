@@ -203,26 +203,29 @@ Pour toute app qui est un jeu :
 ## 8 ter. Labo
 
 Chaque app primaire a une rubrique **Labo** : un banc d'essai où je compare des
-variantes d'interface avant d'en adopter une. Pour une app secondaire, elle est
-facultative et ne se crée que sur ma demande.
+variantes avant d'en adopter une (modèle : `labo.html` de Kingvi). Pour une app
+secondaire, elle est facultative et ne se crée que sur ma demande.
 
-- **Accès** : une page dédiée (`/labo` ou `/app/labo` selon l'app, `labo.html`
-  pour une app statique), avec un lien discret « Labo » (icône Tabler
-  `ti ti-flask`) dans les réglages. Jamais dans l'en-tête.
-- **Menu** : un menu d'ancres HTML en haut de la page, collé en haut au défilement
-  (`position: sticky`), défilable horizontalement sur mobile, avec une entrée par
-  rubrique. Chaque rubrique est une `<section id="…">` avec `scroll-margin-top`
-  pour ne pas passer sous le menu.
-- **Rubriques** : une par sujet testé (ex. « Cartes de la liste », « Boutons »,
-  « Modales »), chacune avec un titre, une phrase qui dit ce que la variante change,
-  et les variantes côte à côte ou l'une sous l'autre, dont **l'actuelle en premier**.
-- **Données** : des données d'exemple en dur ; le labo ne lit ni n'écrit rien dans
-  Supabase ou le `localStorage`.
+- **Accès** : une page dédiée (`labo.html` pour une app statique, `/app/labo`
+  ou `/labo` pour Next.js), avec un lien discret « Labo » (icône Tabler
+  `ti ti-flask`) dans les réglages, jamais dans l'en-tête. Sur la page, l'en-tête
+  garde le nom de l'app (lien de retour) et un libellé « Labo ».
+- **Menu** : en-tête et menu forment un seul bloc collé en haut
+  (`position: sticky`), défilable horizontalement sur mobile.
+  - Peu de rubriques : un menu d'ancres, une entrée par `<section id="…">`
+    (avec `scroll-margin-top` pour ne pas passer sous le menu).
+  - Beaucoup de rubriques : des **thèmes** en onglets, puis le sous-menu des
+    sections du thème ouvert. L'adresse garde le thème ou la section
+    (`#betes`, `#loups`) pour pouvoir partager un lien.
+- **Propositions** : chaque sujet à trancher présente ses variantes avec des
+  lettres (A, B, C…), **A étant toujours l'actuel**. Chaque variante dit en une
+  phrase ce qu'elle change. La variante retenue est marquée « retenue » et
+  branchée dans l'app ; l'ancienne reste en « ancien » ou est retirée.
+- **Données** : des données d'exemple en dur ; le labo ne lit ni n'écrit rien
+  dans Supabase ni dans le `localStorage` (hors outils propres au labo).
 - **Règles** : tokens et icônes au trait comme partout (sections 5 et 8) ; la page
-  est protégée par la même authentification que l'app ; elle n'incrémente pas la
-  version tant qu'elle ne change que le labo, mais sa création oui (mineur).
-- Quand une variante est adoptée, elle passe dans l'app et le labo garde l'ancienne
-  en « Actuel » ou la retire.
+  est protégée par la même authentification que l'app. Créer le labo ou adopter
+  une variante change ce que je vois : incrémente la version (section 2).
 
 ## 9. Code
 
