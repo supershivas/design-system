@@ -43,6 +43,7 @@ développer une fonctionnalité listée ci-dessous.
 - Corbeille ou annulation d'une suppression.
 - Parité visuelle stricte avec les autres apps primaires (même sidebar,
   mêmes composants).
+- Rubrique « Labo » (section 8 ter).
 
 ---
 
@@ -198,6 +199,30 @@ Pour toute app qui est un jeu :
 - **Pause et sauvegarde.** Le jeu se met en pause quand une modale est ouverte.
   La progression est sauvegardée automatiquement (régulièrement et à la
   fermeture), pour ne rien perdre lors d'une mise à jour automatique.
+
+## 8 ter. Labo
+
+Chaque app primaire a une rubrique **Labo** : un banc d'essai où je compare des
+variantes d'interface avant d'en adopter une. Pour une app secondaire, elle est
+facultative et ne se crée que sur ma demande.
+
+- **Accès** : une page dédiée (`/labo` ou `/app/labo` selon l'app, `labo.html`
+  pour une app statique), avec un lien discret « Labo » (icône Tabler
+  `ti ti-flask`) dans les réglages. Jamais dans l'en-tête.
+- **Menu** : un menu d'ancres HTML en haut de la page, collé en haut au défilement
+  (`position: sticky`), défilable horizontalement sur mobile, avec une entrée par
+  rubrique. Chaque rubrique est une `<section id="…">` avec `scroll-margin-top`
+  pour ne pas passer sous le menu.
+- **Rubriques** : une par sujet testé (ex. « Cartes de la liste », « Boutons »,
+  « Modales »), chacune avec un titre, une phrase qui dit ce que la variante change,
+  et les variantes côte à côte ou l'une sous l'autre, dont **l'actuelle en premier**.
+- **Données** : des données d'exemple en dur ; le labo ne lit ni n'écrit rien dans
+  Supabase ou le `localStorage`.
+- **Règles** : tokens et icônes au trait comme partout (sections 5 et 8) ; la page
+  est protégée par la même authentification que l'app ; elle n'incrémente pas la
+  version tant qu'elle ne change que le labo, mais sa création oui (mineur).
+- Quand une variante est adoptée, elle passe dans l'app et le labo garde l'ancienne
+  en « Actuel » ou la retire.
 
 ## 9. Code
 
