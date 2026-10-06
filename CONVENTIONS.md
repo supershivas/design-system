@@ -209,18 +209,25 @@ défiler** : c'est un écran qui montre une variante à la fois.
 
 - **Accès** : une page dédiée (`labo.html` pour une app statique, `/app/labo`
   ou `/labo` pour Next.js), avec un lien discret « Labo » (icône Tabler
-  `ti ti-flask`) dans les réglages, jamais dans l'en-tête. Sur la page,
-  l'en-tête garde le nom de l'app (lien de retour) et un libellé « Labo ».
-- **Écran à hauteur fixe** (`100dvh`) : en-tête, onglets et barre de variantes
+  `ti ti-flask`) dans les réglages, jamais dans l'en-tête de l'app.
+- **En-tête du labo** : il reprend le titre de l'app (logo et nom, même police
+  que l'en-tête de l'app, lien de retour) suivi de « LABO » en police mono,
+  majuscules espacées, dans un cadre fin. Fond **couleur d'accent** de l'app,
+  texte blanc : on doit voir au premier coup d'œil qu'on est dans le labo.
+- **Écran à hauteur fixe** (`100dvh`) : en-tête, menu et barre de variantes
   restent en place ; seul le contenu de la variante défile, et seulement s'il le
   faut.
-- **Sujets en onglets** : un onglet par sujet à trancher (cartes de la liste,
-  boutons, modales…), avec une icône Tabler. Un sujet = un seul onglet actif.
-- **Une variante à la fois** : une barre de lettres **A, B, C…** (**A est toujours
-  l'actuelle**) avec précédent/suivant. Sur bureau, la barre est sous les
-  onglets ; sur mobile, elle est **en bas de l'écran**, à portée du pouce.
-  Changer de variante : clic sur la lettre, flèches ← → du clavier, balayage
-  horizontal sur mobile. Zones de 44 px minimum.
+- **Menu à trois niveaux** : des **groupes** en onglets dans l'en-tête (Liste,
+  Détail, Modales…), les **sujets** du groupe dans la **marge de gauche** (icône
+  Tabler, nombre de variantes), et le sujet ouvert **déplie ses variantes** :
+  lettre **A, B, C…** (**A est toujours l'actuelle**) + titre, la lettre active
+  sur fond d'accent. Un seul sujet ouvert à la fois. Avec peu de sujets, un ou
+  deux niveaux suffisent.
+- **Mobile** (≤ 768 px) : pas de marge. Les sujets du groupe passent en puces
+  sous l'en-tête, et les variantes dans une **barre en bas de l'écran** (lettres,
+  précédent/suivant, titre de la variante ouverte).
+- **Changer de variante** : clic, flèches du clavier, balayage horizontal sur
+  mobile. Zones de 44 px minimum.
 - **Adresse** : elle garde le sujet et la lettre (`#cartes-C`), pour partager un
   lien ; on la met à jour sans recharger la page.
 - **Chaque variante** a un titre et une phrase qui dit ce qu'elle change. Une
