@@ -214,6 +214,11 @@ défiler** : c'est un écran qui montre une variante à la fois.
   que l'en-tête de l'app, lien de retour) suivi de « LABO » en police mono,
   majuscules espacées, dans un cadre fin. Fond **couleur d'accent** de l'app,
   texte blanc : on doit voir au premier coup d'œil qu'on est dans le labo.
+- **Onglet du navigateur** : titre « Labo — Nom de l'app », et favicon du labo
+  (`favicon-labo.svg`, plus un PNG 32 px) = le favicon de l'app avec, en haut à
+  droite, une **pastille sombre (`#1C1C1E`, liseré blanc) portant une fiole
+  blanche** (Tabler `flask`, au trait). Le même signe dans toutes les apps, pour
+  reconnaître un onglet de labo au premier coup d'œil.
 - **Écran à hauteur fixe** (`100dvh`) : en-tête, menu et barre de variantes
   restent en place ; seul le contenu de la variante défile, et seulement s'il le
   faut.
