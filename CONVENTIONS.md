@@ -289,7 +289,8 @@ c'est une app à part.
   même authentification que l'app. Créer l'atelier change ce que je vois :
   incrémente la version (section 2).
 - Modèle de référence : `atelier.html` dans `supershivas/kingvi` (dessins,
-  animations, assets créés, placement des objets sur la carte).
+  animations, assets créés, placement des objets sur la carte, textes : chaque
+  texte sous une clé stable, réécrit sur place dans ses données au lancement).
 
 ## 9. Code
 
