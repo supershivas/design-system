@@ -198,6 +198,18 @@ Pour toute app qui est un jeu :
   réglages et les modales gardent les tokens.
 - **Commandes.** Elles se jouent au pouce (zones de 44 px minimum) et aussi au
   clavier.
+- **Clavier.** Les déplacements lisent la touche physique (`event.code`) :
+  ZQSD en AZERTY et WASD en QWERTY marchent sans réglage, de même que les
+  flèches. Les commandes nommées par une lettre (M la carte, I l'inventaire,
+  E l'action…) lisent le caractère (`event.key`), pour que la touche écrite
+  M ouvre la carte quel que soit le clavier ; repli sur `event.code` si le
+  caractère n'est pas une lettre latine. Aucun raccourci avec Ctrl, Cmd ou
+  Alt, et aucun ne se répète quand on garde la touche enfoncée (`e.repeat`).
+- **Pas de recherche automatique du navigateur.** Firefox lance sa recherche
+  dans la page dès qu'on tape une lettre (ou `'` et `/`) : en jeu, hors des
+  champs de saisie, toute touche imprimable est retenue (`preventDefault` au
+  `keydown`), même si elle n'a pas d'effet. Espace et Entrée restent libres
+  sur un bouton ou un lien qui a le focus.
 - **Pause et sauvegarde.** Le jeu se met en pause quand une modale est ouverte.
   La progression est sauvegardée automatiquement (régulièrement et à la
   fermeture), pour ne rien perdre lors d'une mise à jour automatique.
