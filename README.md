@@ -21,6 +21,7 @@ deux choses :
 | **Studio Créa** | [supershivas/studio-crea](https://github.com/supershivas/studio-crea) | https://supershivas.github.io/studio-crea/ | Secondaire |
 | **Elec AITI** | [supershivas/elec-aiti](https://github.com/supershivas/elec-aiti) | https://supershivas.github.io/elec-aiti/ | Secondaire |
 | **K2** | [supershivas/k2](https://github.com/supershivas/k2) | https://supershivas.github.io/k2/ | Secondaire |
+| **Kingvi SNO 7** | [supershivas/kingvi](https://github.com/supershivas/kingvi) | https://supershivas.github.io/kingvi/ | Secondaire |
 
 ## Contenu
 
