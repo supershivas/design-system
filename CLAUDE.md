@@ -11,8 +11,9 @@ les apps (liste complète dans le tableau du `README.md`) :
 | **Stockportfolio** | `supershivas/stockportfolio` | https://stockportfolio-five.vercel.app/ | Secondaire |
 | **Studio Créa** | `supershivas/studio-crea` | https://supershivas.github.io/studio-crea/ | Secondaire |
 | **Elec AITI** | `supershivas/elec-aiti` | https://supershivas.github.io/elec-aiti/ | Secondaire |
-| **Kingvi SNO 7** | `supershivas/kingvi` | https://supershivas.github.io/kingvi/ | Secondaire |
-| **Pierre et les rats** | `supershivas/pierre-et-les-rats` | https://supershivas.github.io/pierre-et-les-rats/ | Secondaire |
+
+Les jeux ne relèvent pas de ce dépôt : ils suivent `supershivas/game-system`.
+N'y ajoute plus de règle propre aux jeux.
 
 Contenu : `design-tokens.json`, `mobile.css`, `phone-frame.js`, `app-update.js`,
 `CONVENTIONS.md`, `templates/`.

@@ -45,7 +45,7 @@ développer une fonctionnalité listée ci-dessous.
   mêmes composants).
 - Rubrique « Labo » (section 8 ter).
 - Rubrique « Atelier » (section 8 quater), pour une app dont le contenu se
-  modifie (dessins, niveaux, textes, données de jeu).
+  modifie (dessins, textes, données).
 
 ---
 
@@ -188,31 +188,10 @@ Le motif est simple, lisible à 16 px, dans les couleurs des tokens.
 
 ## 8 bis. Jeux
 
-Pour toute app qui est un jeu :
-
-- **Pas de sous-titre.** Jamais de sous-titre ni de baseline sous le nom du jeu,
-  ni dans l'en-tête ni sur l'écran d'accueil.
-- **Palette limitée.** La palette du jeu est restreinte, déclarée dans le
-  `CLAUDE.md` de l'app, et identique entre le canvas, le HUD et les commandes.
-  C'est une exception assumée aux tokens, uniquement pour le jeu. L'en-tête, les
-  réglages et les modales gardent les tokens.
-- **Commandes.** Elles se jouent au pouce (zones de 44 px minimum) et aussi au
-  clavier.
-- **Clavier.** Les déplacements lisent la touche physique (`event.code`) :
-  ZQSD en AZERTY et WASD en QWERTY marchent sans réglage, de même que les
-  flèches. Les commandes nommées par une lettre (M la carte, I l'inventaire,
-  E l'action…) lisent le caractère (`event.key`), pour que la touche écrite
-  M ouvre la carte quel que soit le clavier ; repli sur `event.code` si le
-  caractère n'est pas une lettre latine. Aucun raccourci avec Ctrl, Cmd ou
-  Alt, et aucun ne se répète quand on garde la touche enfoncée (`e.repeat`).
-- **Pas de recherche automatique du navigateur.** Firefox lance sa recherche
-  dans la page dès qu'on tape une lettre (ou `'` et `/`) : en jeu, hors des
-  champs de saisie, toute touche imprimable est retenue (`preventDefault` au
-  `keydown`), même si elle n'a pas d'effet. Espace et Entrée restent libres
-  sur un bouton ou un lien qui a le focus.
-- **Pause et sauvegarde.** Le jeu se met en pause quand une modale est ouverte.
-  La progression est sauvegardée automatiquement (régulièrement et à la
-  fermeture), pour ne rien perdre lors d'une mise à jour automatique.
+Les jeux ne relèvent pas de ce fichier : ils ont leurs propres conventions,
+modules et outils dans `supershivas/game-system`
+(https://supershivas.github.io/game-system/). Une app qui devient un jeu
+passe à game-system.
 
 ## 8 ter. Labo
 
@@ -264,8 +243,8 @@ défiler** : c'est un écran qui montre une variante à la fois.
 
 ## 8 quater. Atelier
 
-Une app dont le contenu se modifie (dessins, placement d'objets, niveaux,
-textes, réglages de jeu) peut avoir un **Atelier**, sur ma demande. Le **Labo**
+Une app dont le contenu se modifie (dessins, placement d'objets, textes,
+réglages) peut avoir un **Atelier**, sur ma demande. Le **Labo**
 **montre et compare** des variantes sans rien changer ; l'**Atelier**
 **modifie** le contenu que l'app lit. Ce n'est jamais un onglet du Labo :
 c'est une app à part.
@@ -300,9 +279,8 @@ c'est une app à part.
 - **Règles** : tokens et icônes au trait (sections 5 et 8), zones de 44 px,
   même authentification que l'app. Créer l'atelier change ce que je vois :
   incrémente la version (section 2).
-- Modèle de référence : `atelier.html` dans `supershivas/kingvi` (dessins,
-  animations, assets créés, placement des objets sur la carte, textes : chaque
-  texte sous une clé stable, réécrit sur place dans ses données au lancement).
+- Chaque contenu modifiable a une clé stable ; l'app relit au lancement le
+  contenu publié, puis les retouches locales pas encore publiées.
 
 ## 9. Code
 

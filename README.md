@@ -21,8 +21,10 @@ deux choses :
 | **Studio Créa** | [supershivas/studio-crea](https://github.com/supershivas/studio-crea) | https://supershivas.github.io/studio-crea/ | Secondaire |
 | **Elec AITI** | [supershivas/elec-aiti](https://github.com/supershivas/elec-aiti) | https://supershivas.github.io/elec-aiti/ | Secondaire |
 | **K2** | [supershivas/k2](https://github.com/supershivas/k2) | https://supershivas.github.io/k2/ | Secondaire |
-| **Kingvi SNO 7** | [supershivas/kingvi](https://github.com/supershivas/kingvi) | https://supershivas.github.io/kingvi/ | Secondaire |
-| **Pierre et les rats** | [supershivas/pierre-et-les-rats](https://github.com/supershivas/pierre-et-les-rats) | https://supershivas.github.io/pierre-et-les-rats/ | Secondaire |
+
+Les jeux (Kingvi SNO 7, Pierre et les rats, Factokid, Croiseur, Frères de la
+Côte…) ne sont pas des apps : ils suivent
+[supershivas/game-system](https://github.com/supershivas/game-system).
 
 ## Contenu
 
