@@ -22,6 +22,7 @@ deux choses :
 | **Elec AITI** | [supershivas/elec-aiti](https://github.com/supershivas/elec-aiti) | https://supershivas.github.io/elec-aiti/ | Secondaire |
 | **K2** | [supershivas/k2](https://github.com/supershivas/k2) | https://supershivas.github.io/k2/ | Secondaire |
 | **Roomplanner** | [supershivas/roomplanner](https://github.com/supershivas/roomplanner) | https://supershivas.github.io/roomplanner/ | Secondaire |
+| **Hub** | [supershivas/hub](https://github.com/supershivas/hub) | https://supershivas.github.io/hub/ | Secondaire |
 
 Les jeux (Kingvi SNO 7, Pierre et les rats, Factokid, Croiseur, Frères de la
 Côte…) ne sont pas des apps : ils suivent
